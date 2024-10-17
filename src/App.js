@@ -9,7 +9,7 @@ const movieData = [
     rating: 8.0, // user rating out of 10
     totalRatings: 515000, // total number of ratings
     censor: "R", // censor rating
-    poster: "posters/bladerunner.jpg"
+    poster: "posters/bladerunner.jpg",
   },
   {
     title: "Fight Club",
@@ -19,8 +19,7 @@ const movieData = [
     rating: 8.8,
     totalRatings: 2100000,
     censor: "R",
-    poster: "posters/fightclub.jpg"
-
+    poster: "posters/fightclub.jpg",
   },
   {
     title: "Incendies",
@@ -30,7 +29,7 @@ const movieData = [
     rating: 8.3,
     totalRatings: 160000,
     censor: "R",
-    poster: "posters/incendies.jpg"
+    poster: "posters/incendies.jpg",
   },
   {
     title: "The Iron Giant",
@@ -40,7 +39,7 @@ const movieData = [
     rating: 8.1,
     totalRatings: 230000,
     censor: "PG",
-    poster: "posters/irongiant.jpg"
+    poster: "posters/irongiant.jpg",
   },
   {
     title: "Joker",
@@ -50,7 +49,7 @@ const movieData = [
     rating: 8.4,
     totalRatings: 1300000,
     censor: "R",
-    poster: "posters/joker.jpg"
+    poster: "posters/joker.jpg",
   },
   {
     title: "Oppenheimer",
@@ -60,7 +59,7 @@ const movieData = [
     rating: 8.9,
     totalRatings: 550000,
     censor: "R",
-    poster: "posters/oppenhiemer.jpg"
+    poster: "posters/oppenhiemer.jpg",
   },
 ];
 
@@ -88,19 +87,17 @@ function Header() {
 }
 
 function Movies() {
-  return(
+  return (
     <div className="grid grid-cols-3 w-full gap-10 justify-items-center">
-      {movieData.map((ele) => (<Movie movie={ele}/>))}
+      {movieData.map((ele) => (
+        <Movie movie={ele} />
+      ))}
     </div>
-  )
+  );
 }
 
-function Movie({movie}) {
-
+function Movie({ movie }) {
   console.log(movie.poster);
-
-
-  
 
   return (
     <div className="flex flex-row w-[440px] h-[240px] p-[20px]  rounded-2xl shadow shadow-transparent hover:shadow-black hover:scale-105 transition ease-in-out delay-150">
@@ -108,7 +105,7 @@ function Movie({movie}) {
         <img
           src={movie.poster}
           alt="bladerunner"
-          style={{ objectFit: "contain" , width:"200px", height:"190px"}}
+          style={{ objectFit: "contain", width: "200px", height: "190px" }}
         />
       </div>
       <div className="w-[200px] h-[200px] flex p-4 text-[#eeeeee]">
